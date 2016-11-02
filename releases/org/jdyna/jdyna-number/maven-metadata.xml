@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.jdyna</groupId>
+  <artifactId>jdyna-number</artifactId>
+  <versioning>
+    <versions>
+      <version>5.7-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20161102111112</lastUpdated>
+  </versioning>
+</metadata>
