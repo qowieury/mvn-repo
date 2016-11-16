@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>it.4science.dspace</groupId>
+	<artifactId>addon-ckan-api</artifactId>
+	<packaging>jar</packaging>
+	
+	<parent>
+		<artifactId>addon-ckan</artifactId>
+		<groupId>it.4science.dspace</groupId>
+		<relativePath>../</relativePath>
+		<version>5.0</version>
+	</parent>
+
+    <properties>
+        <!-- This is the path to the root [dspace-src] directory. -->
+        <root.basedir>${basedir}/..</root.basedir>
+    </properties>
+    
+	<dependencies>
+		<dependency>
+			<groupId>org.dspace</groupId>
+			<artifactId>dspace-api</artifactId>
+		</dependency>
+	</dependencies>
+	
+</project>
