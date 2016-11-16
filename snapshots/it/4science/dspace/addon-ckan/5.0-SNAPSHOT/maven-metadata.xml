@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>it.4science.dspace</groupId>
+  <artifactId>addon-ckan</artifactId>
+  <version>5.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20161116.004040</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20161116004040</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>5.0-20161116.004040-1</value>
+        <updated>20161116004040</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
