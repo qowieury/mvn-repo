@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>de.digitalcollections</groupId>
+  <artifactId>iiif-presentation-frontend-impl-client-rest</artifactId>
+  <versioning>
+    <versions>
+      <version>3.2.4-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20170110170328</lastUpdated>
+  </versioning>
+</metadata>
