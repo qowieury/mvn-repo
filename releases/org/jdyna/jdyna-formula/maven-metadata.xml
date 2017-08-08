@@ -3,10 +3,11 @@
   <groupId>org.jdyna</groupId>
   <artifactId>jdyna-formula</artifactId>
   <versioning>
-    <release>5.7</release>
+    <release>5.8</release>
     <versions>
       <version>5.7</version>
+      <version>5.8</version>
     </versions>
-    <lastUpdated>20161115110656</lastUpdated>
+    <lastUpdated>20170808072412</lastUpdated>
   </versioning>
 </metadata>
