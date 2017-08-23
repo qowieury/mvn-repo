@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.4science</groupId>
+  <artifactId>dev-orcid-jaxb</artifactId>
+  <versioning>
+    <versions>
+      <version>CRIS-5.7.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20170823132331</lastUpdated>
+  </versioning>
+</metadata>
