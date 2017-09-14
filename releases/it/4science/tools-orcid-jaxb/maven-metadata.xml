@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.4science</groupId>
+  <artifactId>tools-orcid-jaxb</artifactId>
+  <versioning>
+    <release>2.0</release>
+    <versions>
+      <version>2.0</version>
+    </versions>
+    <lastUpdated>20170914232553</lastUpdated>
+  </versioning>
+</metadata>
