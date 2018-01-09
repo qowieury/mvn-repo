@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>commons-cilea-webapi</artifactId>
+	<groupId>it.cilea</groupId>
+		
+	<parent>
+		<artifactId>commons-cilea</artifactId>
+		<groupId>it.cilea</groupId>
+		<version>7.0-SNAPSHOT</version>
+	</parent>
+
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>	
+	</properties>
+	
+	<dependencies>
+
+		<dependency>
+			<groupId>displaytag</groupId>
+			<artifactId>displaytag</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+
+		</dependency>
+	
+				<dependency>
+				<artifactId>spring-core</artifactId>
+				<groupId>org.springframework</groupId>
+				
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-beans</artifactId>
+				<groupId>org.springframework</groupId>
+				
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-aop</artifactId>
+				<groupId>org.springframework</groupId>
+				
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-context</artifactId>
+				<groupId>org.springframework</groupId>
+				
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-tx</artifactId>
+				<groupId>org.springframework</groupId>
+				
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-jdbc</artifactId>
+				<groupId>org.springframework</groupId>
+				
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-web</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-webmvc</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+	
+		<dependency>
+			<groupId>it.cilea</groupId>
+			<artifactId>commons-cilea-genericdao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+	</dependencies>
+	
+</project>
