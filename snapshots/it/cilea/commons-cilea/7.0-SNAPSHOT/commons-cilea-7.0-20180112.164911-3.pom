@@ -1,0 +1,213 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.cilea</groupId>
+	<artifactId>commons-cilea</artifactId>
+	<version>7.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<org.hibernate.version>5.2.8.Final</org.hibernate.version>
+        <org.spring.version>5.0.2.RELEASE</org.spring.version>
+        <java.version>1.8</java.version>
+	</properties>
+    
+    <scm>
+      <connection>scm:git:https://github.com/4Science/CCommons.git</connection>
+      <developerConnection>scm:git:https://github.com/4Science/CCommons.git</developerConnection>
+      <url>https://github.com/4Science/CCommons.git</url>
+      <tag>2.0</tag>
+    </scm>
+    
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<!-- Turn on http://errorprone.info -->
+					<compilerId>javac-with-errorprone</compilerId>
+					<forceJavacCompilerUse>true</forceJavacCompilerUse>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+				<!-- Extra dependencies for http://errorprone.info -->
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.plexus</groupId>
+						<artifactId>plexus-compiler-javac-errorprone</artifactId>
+						<version>2.8.2</version>
+					</dependency>
+					<!-- Override plexus-compiler-javac-errorprone's dependency on Error Prone 
+						with the latest version -->
+					<dependency>
+						<groupId>com.google.errorprone</groupId>
+						<artifactId>error_prone_core</artifactId>
+						<version>2.1.1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<!-- During release:perform, enable the "release" profile (see below) -->
+					<releaseProfiles>release</releaseProfiles>
+					<goals>clean deploy</goals>
+					<!-- Suggest tagging the release in SCM as "dspace-[version]" -->
+					<tagNameFormat>@{project.version}</tagNameFormat>
+					<!-- Auto-Version all modules the same as the parent module -->
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+	  <!--
+         The 'release' profile is used by the 'maven-release-plugin' (see above)      
+       -->
+      <profile>
+         <id>release</id>
+         <activation>
+            <activeByDefault>false</activeByDefault>
+         </activation>         
+         <modules>
+			<module>commons-cilea-api</module>            
+         </modules>
+      </profile>
+	</profiles>
+	
+	<modules>
+		<module>commons-cilea-api</module>
+	</modules>
+
+	<distributionManagement>
+    	<repository>
+        	<id>repo</id>
+        	<name>4Science Maven Repository</name>
+        	<url>https://github.com/4Science/mvn-repo/raw/master/releases</url>
+    	</repository>
+    	<snapshotRepository>
+        	<id>snapshot-repo</id>
+        	<name>4Science Maven Repository</name>
+        	<url>https://github.com/4Science/mvn-repo/raw/master/snapshots</url>
+    	</snapshotRepository>
+	</distributionManagement>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>commons-collections</groupId>
+				<artifactId>commons-collections</artifactId>
+				<version>3.2</version>
+			</dependency>
+	
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-ehcache</artifactId>
+				<version>${org.hibernate.version}</version>
+			</dependency>           
+			
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${org.hibernate.version}</version>
+			</dependency>
+	
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.2</version>
+			</dependency>
+	
+			<dependency>
+				<artifactId>spring-core</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${org.spring.version}</version>
+			</dependency>
+			
+			<dependency>
+				<artifactId>spring-beans</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-aop</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-context</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-tx</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<artifactId>spring-jdbc</artifactId>
+				<groupId>org.springframework</groupId>
+				<version>${org.spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.0.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>displaytag</groupId>
+				<artifactId>displaytag</artifactId>
+				<version>1.2</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.lowagie</groupId>
+						<artifactId>itext</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>commons-collections</groupId>
+						<artifactId>commons-collections</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>jcl104-over-slf4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			
+		</dependencies>
+
+	</dependencyManagement>
+</project>
