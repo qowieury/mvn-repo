@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.dspace</groupId>
+  <artifactId>resourcesync</artifactId>
+  <versioning>
+    <versions>
+      <version>1.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20180518114220</lastUpdated>
+  </versioning>
+</metadata>
