@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.4science.dspace</groupId>
+  <artifactId>addon-commons-xmlui</artifactId>
+  <versioning>
+    <versions>
+      <version>6.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20180710134239</lastUpdated>
+  </versioning>
+</metadata>
