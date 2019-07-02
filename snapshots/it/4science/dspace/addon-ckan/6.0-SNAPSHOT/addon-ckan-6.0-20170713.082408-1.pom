@@ -12,9 +12,9 @@
 
 
 	<scm>
-		<connection>scm:git:https://github.com/4Science/DSpace-CKAN.git</connection>
-		<developerConnection>scm:git:https://github.com/4Science/DSpace-CKAN.git</developerConnection>
-		<url>https://github.com/4Science/DSpace-CKAN.git</url>
+		<connection>scm:git:https://github.com/qowieury/dspace-ckan.git</connection>
+		<developerConnection>scm:git:https://github.com/qowieury/dspace-ckan.git</developerConnection>
+		<url>https://github.com/qowieury/dspace-ckan.git</url>
 		<tag>1.0</tag>
 	</scm>
 
